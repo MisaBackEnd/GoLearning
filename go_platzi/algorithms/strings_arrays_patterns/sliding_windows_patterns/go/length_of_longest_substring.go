@@ -22,11 +22,6 @@ func lengthOfLongestSubstring(s string) int {
 			dict[letter] = i
 		} else {
 			dict[letter] = i
-			// fmt.Println("-------------------------")
-			// fmt.Println("i", i)
-			// fmt.Println("ip", ip)
-			// fmt.Println("letter", letter)
-			// fmt.Println("i-ip", i-ip)
 			switch {
 			case dp > ip:
 				if dp < i {
@@ -42,20 +37,6 @@ func lengthOfLongestSubstring(s string) int {
 		}
 		fmt.Printf("final i%d - ip%d = %d\n", i, ip, i-ip)
 		maxLength = max(maxLength, len(s[ip:i+1]))
-
-		// actualizar el pointer del inicio de la subcadena paramath
-		// quede fuera del rango de repeticion.
-
-		// existen dos formas en las que se puede mover el pointer de inicio
-		// de la subcadena, se puede mover de a uno o saltar directamente al index
-
-		// si se encuentra al inicio de la subcadena entonces se debe:
-		//		actualizar el index del diccionario al indice donde se encuentra
-		//		repetido.
-		//		se debe correr el pointer de inicio una posicion.
-		// si se encuentra en una posicion mayor al inicio de la subcadena:
-		// 		actualizar el index del diccionario
-		//		correr el pointer de inicio a la posicion donde se encontro la repeticion
 
 	}
 	fmt.Println(dict)
