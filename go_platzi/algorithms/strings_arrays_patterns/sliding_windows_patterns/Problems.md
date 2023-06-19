@@ -25,11 +25,13 @@ The easy way was using an acumulator for the ones found, and reseting thecounter
 [LeetCode Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 [My solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/967786483/)
 
-## Longest repeating character replacement 
+## Longest repeating character replacement (Pending go solution)
 [LeetCode Link](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
 ## Find all anagrams in a string
 [LeetCode Link](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+[[My solution|Python]](https://leetcode.com/problems/find-all-anagrams-in-a-string/submissions/975040558/)
+[My Solution](https://leetcode.com/problems/find-all-anagrams-in-a-string/submissions/975082040/)
 
 ## Best Time to Buy And Sell Stock
 [LeetCode Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
