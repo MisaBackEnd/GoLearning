@@ -2,7 +2,7 @@
 
 ## Clases
 
-Definen las propiedades de un objeto, son una especie de plantilla para crear objetos concretos.
+They define the properties of an object, we can think of them as a sort of a blueprint.
 
 The equivalent of a class in go is a struct.
 
