@@ -37,27 +37,22 @@ func (s *SinglyLinkedList) InsertEnd(val int) {
 }
 
 // remove value at index of a singly linked list
-func (s *SinglyLinkedList) Remove(index int) {
-	c := 1
+func (s *SinglyLinkedList) Find(index int) (*ListNode, *ListNode) {
 	node := s.Head
-	// the node is the second element
-	for c < index {
+	var prev *ListNode
+	for i := 0; i < index; i++ {
+		prev = node
 		node = node.Next
-		c++
 	}
-	fmt.Println(node)
-	// the index == 0 make the next node the head
-	if node != nil {
-		switch {
-		case s.Head == node && node.Next != nil && index == 0:
-			s.Head = node.Next
-		case node.Next == s.Tail:
-			s.Tail = node
-		default:
-			if node.Next != nil {
-				node.Next = node.Next.Next
-			}
-		}
+	return prev, node
+}
+
+func (s *SinglyLinkedList) Remove(index int) {
+	prev, node := s.Find(index)
+	if index == 0 {
+		s.Head = node.Next
+	} else {
+		prev.Next = node.Next
 	}
 }
 
@@ -73,6 +68,6 @@ func main() {
 	sl := NewSinglyLinkedList()
 	sl.InsertEnd(5)
 	sl.InsertEnd(6)
-	sl.Remove(0)
+	sl.Remove(3)
 	sl.Print()
 }
